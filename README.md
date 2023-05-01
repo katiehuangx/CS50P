@@ -73,7 +73,7 @@ else:
 ```
 
 Home Federal Savings Bank
-```
+```python
 greeting = input("Greeting: ")
 
 if "hello" in greeting.lower().strip():
@@ -85,7 +85,7 @@ else:
 ```
 
 File Extensions
-```
+```python
 file = input("File name: ").lower().strip()
 
 if ".gif" in file:
@@ -107,7 +107,7 @@ else:
 Math Interpreter
 
 Meal Time
-```
+```python
 def main():
     time = input("What time is it? ")
     meal_time = convert(time)
