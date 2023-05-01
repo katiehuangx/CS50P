@@ -1,17 +1,142 @@
 # HarvardX CS50P's Introduction to Programming with Python
 
-### Week 1: Functions, Variables
+### Week 0: Functions, Variables
 
+Link to Problem Set 0: https://cs50.harvard.edu/python/2022/psets/0/
+
+**Indoor Voice**
+```python
+voice = input("Use your indoor voice! ").lower()
+
+print(voice)
+```
+
+**Playback Speed**
+```python
+playback = input("Display 0.75 playback speed ").split()
+
+print('...'.join(playback))
+```
+
+**Making Faces**
+```python
+def main():
+    face = str(input("What's your input? ")).replace(":)","🙂").replace(":(","🙁")
+    convert(face)
+
+def convert(to="emojis"):
+    print(to)
+
+main()
+```
+
+**Einstein**
+```python
+m = int(input("m: "))
+c = int(300000000)
+energy = m * c ** 2
+
+print(f"E: {energy}")
+```
+
+**Tip Calculator**
+```python
+def main():
+    dollars = dollars_to_float(input("How much was the meal? "))
+    percent = percent_to_float(input("What percentage would you like to tip? "))
+    tip = dollars * percent
+    print(f"Leave ${tip:.2f}")
+
+def dollars_to_float(d):
+    return float(d.replace("$", ""))
+
+def percent_to_float(p):
+    return float(p.replace("%",""))/100
+
+main()
+```
 
 ***
 
+### Week 1: Loops
+
+Link to Problem Set 1: https://cs50.harvard.edu/python/2022/psets/1/
+
+Deep Thought
+```python
+answer = input("What's your answer? ").strip().lower()
+
+if answer == "42" or answer == "forty-two" or answer == "forty two":
+    print("Yes")
+else:
+    print("No")
+```
+
+Home Federal Savings Bank
+```
+greeting = input("Greeting: ")
+
+if "hello" in greeting.lower().strip():
+    print("$0")
+elif greeting[0].lower().strip() == "h":
+    print("$20")
+else:
+    print("$100")
+```
+
+File Extensions
+```
+file = input("File name: ").lower().strip()
+
+if ".gif" in file:
+    print("image/gif")
+elif ".jpg" in file or ".jpeg" in file:
+    print("image/jpeg")
+elif ".png" in file:
+    print("image/png")
+elif ".pdf" in file:
+    print("application/pdf")
+elif ".txt" in file:
+    print("text/plain")
+elif ".zip" in file:
+    print("application/zip")
+else:
+    print("application/octet-stream")
+```
+
+Math Interpreter
+
+Meal Time
+```
+def main():
+    time = input("What time is it? ")
+    meal_time = convert(time)
+
+    if 7.00 <= meal_time <= 8.00:
+        print("breakfast time")
+    elif 12.00 <= meal_time <= 13.00:
+        print("lunch time")
+    elif 18.00 <= meal_time <= 19.00:
+        print("dinner time")
+    else:
+        pass
+
+def convert(time):
+    hours, minutes = time.split(":")
+    converted_time = ((int(hours) * 60) + int(minutes))/60
+    return float(converted_time)
+
+if __name__ == "__main__":
+    main()
+```
+
+***
 
 ### Week 2: Loops
 
 Link to Problem Set 2: https://cs50.harvard.edu/python/2022/psets/2/
 
 camelCase
-
 ```python
 variable = input("camelCase: ")
 print("snake_case: ")
@@ -30,4 +155,7 @@ for alphabet in variable:
 print()
 ```
 
-
+Coke Machine
+Just setting up my twttr
+Vanity Plates
+Nutrition Facts
