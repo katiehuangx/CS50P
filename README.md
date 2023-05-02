@@ -148,6 +148,7 @@ Link to Problem Set 2: https://cs50.harvard.edu/python/2022/psets/2/
 
 camelCase
 ```python
+# Solution 1
 variable = input("camelCase: ")
 print("snake_case: ")
 
@@ -163,6 +164,25 @@ for alphabet in variable:
         print(alphabet, end="")
 
 print()
+```
+
+```python
+# Solution 2
+variable = input("camelCase: ")
+
+def main():
+    word = ""
+    # Iterate over alphabet in variable
+
+    for alphabet in variable:
+        if alphabet.isupper():
+            word += "".join("_" + alphabet.lower())
+        else:
+            word += "".join(alphabet)
+
+    print(word)
+
+main()
 ```
 
 Coke Machine
