@@ -186,6 +186,22 @@ main()
 ```
 
 Coke Machine
+
 Just setting up my twttr
+```python
+string = input("Input: ")
+
+vowels = ("a", "e", "i", "o", "u")
+new_string = ""
+
+for s in string:
+    if s.lower() in vowels:
+        new_string += "".join(s.replace(s, ""))
+    if s.lower() not in vowels:
+        new_string += "".join(s)
+
+print(f"Output: {new_string}")
+```
+
 Vanity Plates
 Nutrition Facts
