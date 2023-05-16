@@ -226,6 +226,38 @@ if item in fruits:
 Link to Problem Set 3: https://cs50.harvard.edu/python/2022/psets/3/
 
 Fuel Gauge
+```
+def main():
+    x = get_fuel("Fraction: ")
+    if x <= 1:
+        print("E")
+    if 99 <= x < 101:
+        print("F")
+    if 1 < x < 99:
+        print(x, '%', sep='')
+
+def get_fuel(prompt):
+    while True:
+        try:
+            fuel = input(prompt)
+            x, y = fuel.split("/")
+            fuel_gauge = round(int(x)/int(y)*100)
+
+            if int(y) == 0 or int(x) > int(y):
+                continue
+            elif fuel_gauge <= 1:
+                return fuel_gauge
+            elif 99 <= fuel_gauge < 101:
+                return fuel_gauge
+            else: # 1 < fuel_gauge < 99:
+                return fuel_gauge
+
+        except (ValueError, ZeroDivisionError):
+            pass
+
+main()
+```
+
 Felipe’s Taqueria
 Grocery List
 Outdated
