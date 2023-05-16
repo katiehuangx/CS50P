@@ -226,7 +226,7 @@ if item in fruits:
 Link to Problem Set 3: https://cs50.harvard.edu/python/2022/psets/3/
 
 Fuel Gauge
-```
+```python
 def main():
     x = get_fuel("Fraction: ")
     if x <= 1:
